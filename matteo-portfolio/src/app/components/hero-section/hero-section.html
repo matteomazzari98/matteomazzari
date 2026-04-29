@@ -1,0 +1,39 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__backdrop" aria-hidden="true"></div>
+  <div class="hero__mist" aria-hidden="true"></div>
+
+  <nav class="hero__language-switcher" [attr.aria-label]="languageUi.languageLabel">
+    @for (language of languages; track language) {
+      <button
+        type="button"
+        [class.hero__language-button--active]="currentLanguage === language"
+        [attr.aria-pressed]="currentLanguage === language"
+        class="hero__language-button"
+        (click)="languageChange.emit(language)"
+      >
+        {{ languageUi.languages[language] }}
+      </button>
+    }
+  </nav>
+
+  <div class="hero__content reveal">
+    <p class="hero__kicker">{{ profile.role }} · {{ profile.location }}</p>
+    <h1 id="hero-title">{{ profile.name }}</h1>
+    <p class="hero__headline">{{ profile.headline }}</p>
+    <p class="hero__intro">{{ profile.intro }}</p>
+
+    <div class="hero__actions" [attr.aria-label]="ui.actionsLabel">
+      <a class="button button--primary" [href]="profile.resumeUrl">{{ ui.primaryCta }}</a>
+      <a class="button button--ghost" href="#projects">{{ ui.projectsCta }}</a>
+    </div>
+  </div>
+
+  <aside class="hero__note reveal reveal--late" [attr.aria-label]="ui.noteLabel">
+    <span class="hero__note-mark" aria-hidden="true"></span>
+    <p>{{ profile.availability }}</p>
+  </aside>
+
+  <a class="hero__scroll" href="#story-road" [attr.aria-label]="ui.scrollLabel">
+    <span></span>
+  </a>
+</section>

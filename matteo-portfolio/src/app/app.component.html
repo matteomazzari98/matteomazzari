@@ -1,0 +1,21 @@
+<a class="skip-link" href="#about">{{ data().ui.skipLink }}</a>
+
+<main id="top">
+  <app-hero-section
+    [profile]="data().profile"
+    [ui]="data().ui.hero"
+    [languageUi]="data().ui"
+    [languages]="languages"
+    [currentLanguage]="currentLanguage()"
+    (languageChange)="setLanguage($event)"
+  />
+  <app-about-section [about]="data().about" [ui]="data().ui.sections.about" />
+  <app-story-road [milestones]="data().storyMilestones" [ui]="data().ui.sections.road" />
+  <app-education-section [education]="data().education" [ui]="data().ui.sections.education" />
+  <app-work-section [work]="data().work" [ui]="data().ui.sections.work" />
+  <app-skills-section [skills]="data().skills" [ui]="data().ui.sections.skills" />
+  <app-projects-section [projects]="data().projects" [ui]="data().ui.sections.projects" />
+  <app-contact-section [contacts]="data().contacts" [profile]="data().profile" [ui]="data().ui.sections.contact" />
+</main>
+
+<app-site-footer [profile]="data().profile" [ui]="data().ui.footer" />

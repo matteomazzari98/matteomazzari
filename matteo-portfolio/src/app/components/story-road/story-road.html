@@ -1,0 +1,65 @@
+<section class="section story-road" id="story-road" aria-labelledby="road-title">
+  <app-section-heading
+    [eyebrow]="ui.eyebrow"
+    [title]="ui.title"
+    [description]="ui.description"
+    align="center"
+    headingId="road-title"
+  />
+
+  <div class="story-road__map reveal" [attr.aria-label]="ui.mapLabel">
+    <svg viewBox="0 0 1100 360" role="img" aria-labelledby="road-map-title road-desc" preserveAspectRatio="none">
+      <title id="road-map-title">{{ ui.svgTitle }}</title>
+      <desc id="road-desc">{{ ui.svgDescription }}</desc>
+      <defs>
+        <linearGradient id="road-fill" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#52677a" />
+          <stop offset="54%" stop-color="#334457" />
+          <stop offset="100%" stop-color="#223143" />
+        </linearGradient>
+        <linearGradient id="road-light" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stop-color="#ffe3aa" stop-opacity="0.45" />
+          <stop offset="45%" stop-color="#fff8e9" stop-opacity="0.14" />
+          <stop offset="100%" stop-color="#101827" stop-opacity="0.3" />
+        </linearGradient>
+      </defs>
+      <path
+        class="story-road__shadow"
+        d="M32 202 C 158 132, 288 140, 416 182 C 546 224, 650 238, 756 188 C 872 134, 962 130, 1068 172"
+      />
+      <path
+        class="story-road__surface"
+        d="M42 194 C 168 126, 294 134, 420 174 C 550 214, 648 228, 752 180 C 866 128, 958 124, 1058 164"
+      />
+      <path
+        class="story-road__highlight"
+        d="M42 194 C 168 126, 294 134, 420 174 C 550 214, 648 228, 752 180 C 866 128, 958 124, 1058 164"
+      />
+      <path
+        class="story-road__side story-road__side--left"
+        d="M42 194 C 168 126, 294 134, 420 174 C 550 214, 648 228, 752 180 C 866 128, 958 124, 1058 164"
+      />
+      <path
+        class="story-road__side story-road__side--right"
+        d="M42 194 C 168 126, 294 134, 420 174 C 550 214, 648 228, 752 180 C 866 128, 958 124, 1058 164"
+      />
+      <path
+        class="story-road__centerline"
+        d="M42 194 C 168 126, 294 134, 420 174 C 550 214, 648 228, 752 180 C 866 128, 958 124, 1058 164"
+      />
+    </svg>
+
+    <ol class="story-road__steps">
+      @for (milestone of milestones; track milestone.title; let index = $index) {
+        <li class="story-road__step story-road__step--{{ index + 1 }}">
+          <span class="story-road__pin" aria-hidden="true">{{ index + 1 }}</span>
+          <article>
+            <p>{{ milestone.period }}</p>
+            <h3>{{ milestone.title }}</h3>
+            <span>{{ milestone.place }}</span>
+          </article>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

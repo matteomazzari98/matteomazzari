@@ -1,0 +1,22 @@
+<section class="section about" id="about" aria-labelledby="about-title">
+  <div class="about__layout">
+    <app-section-heading
+      [eyebrow]="ui.eyebrow"
+      [title]="about.title"
+      [description]="ui.description"
+      headingId="about-title"
+    />
+
+    <div class="about__copy reveal">
+      @for (paragraph of about.paragraphs; track paragraph) {
+        <p>{{ paragraph }}</p>
+      }
+    </div>
+  </div>
+
+  <div class="about__traits" [attr.aria-label]="ui.traitsLabel">
+    @for (trait of about.traits; track trait) {
+      <span class="about__trait reveal">{{ trait }}</span>
+    }
+  </div>
+</section>

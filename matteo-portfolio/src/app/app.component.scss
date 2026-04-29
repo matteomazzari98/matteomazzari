@@ -1,0 +1,23 @@
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
+  transform: translateY(-180%);
+  border-radius: 999px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  padding: 0.8rem 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+main {
+  overflow: clip;
+}

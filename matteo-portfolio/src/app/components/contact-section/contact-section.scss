@@ -1,0 +1,73 @@
+.contact {
+  --section-heading-eyebrow-color: var(--color-gold-soft);
+  --section-heading-title-color: #fffaf0;
+  --section-heading-description-color: rgba(255, 249, 238, 0.92);
+  --section-heading-eyebrow-shadow: 0 8px 24px rgba(0, 0, 0, 0.42);
+  --section-heading-title-shadow: 0 2px 0 rgba(12, 20, 34, 0.18), 0 18px 42px rgba(0, 0, 0, 0.54);
+  --section-heading-description-shadow: 0 12px 30px rgba(0, 0, 0, 0.44);
+
+  background:
+    linear-gradient(180deg, rgba(19, 32, 51, 0.08), rgba(19, 32, 51, 0.72)),
+    radial-gradient(circle at 50% 0%, rgba(242, 187, 97, 0.22), transparent 24rem),
+    #132033;
+  color: var(--color-paper);
+}
+
+.contact__panel {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+  padding: clamp(2rem, 6vw, 4rem);
+  border: 1px solid rgba(255, 249, 238, 0.14);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(129, 183, 174, 0.16), transparent 16rem),
+    rgba(255, 255, 255, 0.055);
+  box-shadow: 0 28px 76px rgba(0, 0, 0, 0.2);
+}
+
+.contact__links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 255px), 1fr));
+  gap: 0.8rem;
+  margin-top: clamp(2rem, 5vw, 3.4rem);
+}
+
+.contact__links a {
+  display: grid;
+  gap: 0.4rem;
+  min-height: 7.2rem;
+  padding: 1.05rem 1.15rem;
+  align-content: center;
+  border: 1px solid rgba(255, 249, 238, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff8e9;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+@media (hover: hover) {
+  .contact__links a:hover {
+    transform: translateY(-5px);
+    border-color: rgba(242, 187, 97, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.contact__links span {
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact__links strong {
+  overflow-wrap: anywhere;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+}
+
+@media (max-width: 560px) {
+  .contact__panel {
+    padding: 1.2rem;
+  }
+}

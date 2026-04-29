@@ -1,0 +1,23 @@
+<section class="section skills" id="skills" aria-labelledby="skills-title">
+  <app-section-heading
+    [eyebrow]="ui.eyebrow"
+    [title]="ui.title"
+    [description]="ui.description"
+    align="center"
+    headingId="skills-title"
+  />
+
+  <div class="skills__grid">
+    @for (group of skills; track group.title) {
+      <article class="skill-orbit reveal">
+        <h3>{{ group.title }}</h3>
+        <p>{{ group.summary }}</p>
+        <div class="skill-orbit__badges">
+          @for (skill of group.skills; track skill) {
+            <span>{{ skill }}</span>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

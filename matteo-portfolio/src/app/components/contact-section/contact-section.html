@@ -1,0 +1,20 @@
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact__panel reveal">
+    <app-section-heading
+      [eyebrow]="ui.eyebrow"
+      [title]="ui.title"
+      [description]="profile.availability"
+      align="center"
+      headingId="contact-title"
+    />
+
+    <div class="contact__links">
+      @for (contact of contacts; track contact.label) {
+        <a [href]="contact.href" target="_blank" rel="noreferrer">
+          <span>{{ contact.label }}</span>
+          <strong>{{ contact.value }}</strong>
+        </a>
+      }
+    </div>
+  </div>
+</section>
