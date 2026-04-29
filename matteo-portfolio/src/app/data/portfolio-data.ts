@@ -359,7 +359,7 @@ export const portfolioContent: Record<Language, PortfolioData> = {
       commonContacts.email,
       commonContacts.phoneIt,
       { label: 'LinkedIn', value: 'matteo-mazzari-840252207', href: 'https://www.linkedin.com/in/matteo-mazzari-840252207' },
-      { label: 'GitHub', value: 'Repository disponibili su richiesta', href: '#contact' },
+      { label: 'GitHub', value: 'matteomazzari', href: 'https://github.com/matteomazzari98/matteomazzari' },
     ],
   },
   en: {
@@ -618,7 +618,7 @@ export const portfolioContent: Record<Language, PortfolioData> = {
       commonContacts.email,
       commonContacts.phoneEn,
       { label: 'LinkedIn', value: 'matteo-mazzari-840252207', href: 'https://www.linkedin.com/in/matteo-mazzari-840252207' },
-      { label: 'GitHub', value: 'Repositories available upon request', href: '#contact' },
+      { label: 'GitHub', value: 'matteomazzari', href: 'https://github.com/matteomazzari98/matteomazzari' },
     ],
   },
 };
