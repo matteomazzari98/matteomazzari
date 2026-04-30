@@ -13,7 +13,7 @@
         <h3>{{ group.title }}</h3>
         <p>{{ group.summary }}</p>
         <div class="skill-orbit__badges">
-          @for (skill of group.skills; track skill) {
+          @for (skill of group.skills; track $index) {
             <span>{{ skill }}</span>
           }
         </div>

@@ -8,14 +8,14 @@
     />
 
     <div class="about__copy reveal">
-      @for (paragraph of about.paragraphs; track paragraph) {
+      @for (paragraph of about.paragraphs; track $index) {
         <p>{{ paragraph }}</p>
       }
     </div>
   </div>
 
   <div class="about__traits" [attr.aria-label]="ui.traitsLabel">
-    @for (trait of about.traits; track trait) {
+    @for (trait of about.traits; track $index) {
       <span class="about__trait reveal">{{ trait }}</span>
     }
   </div>

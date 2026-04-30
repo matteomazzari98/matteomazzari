@@ -7,7 +7,7 @@
   />
 
   <div class="work__path">
-    @for (item of work; track item.title; let index = $index) {
+    @for (item of work; track item.period + item.place + item.title; let index = $index) {
       <article class="work-card reveal">
         <div class="work-card__number" aria-hidden="true">0{{ index + 1 }}</div>
         <div>
@@ -17,12 +17,12 @@
           <p class="work-card__description">{{ item.description }}</p>
           <div class="work-card__details">
             <ul>
-              @for (highlight of item.highlights; track highlight) {
+              @for (highlight of item.highlights; track $index) {
                 <li>{{ highlight }}</li>
               }
             </ul>
             <div class="work-card__tech" [attr.aria-label]="ui.technologiesLabel">
-              @for (tech of item.technologies; track tech) {
+              @for (tech of item.technologies; track $index) {
                 <span>{{ tech }}</span>
               }
             </div>

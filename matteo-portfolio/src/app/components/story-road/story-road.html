@@ -49,8 +49,8 @@
       />
     </svg>
 
-    <ol class="story-road__steps">
-      @for (milestone of milestones; track milestone.title; let index = $index) {
+    <ol class="story-road__steps" [style.--milestone-count]="milestones.length">
+      @for (milestone of milestones; track milestone.period + milestone.place + milestone.title; let index = $index) {
         <li class="story-road__step story-road__step--{{ index + 1 }}">
           <span class="story-road__pin" aria-hidden="true">{{ index + 1 }}</span>
           <article>

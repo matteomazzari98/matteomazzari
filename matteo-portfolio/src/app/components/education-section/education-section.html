@@ -18,13 +18,13 @@
           <h3>{{ item.title }}</h3>
           <p>{{ item.description }}</p>
           <ul>
-            @for (highlight of item.highlights; track highlight) {
+            @for (highlight of item.highlights; track $index) {
               <li>{{ highlight }}</li>
             }
           </ul>
           @if (item.technologies?.length) {
             <div class="tag-row" [attr.aria-label]="ui.technologiesLabel">
-              @for (tech of item.technologies; track tech) {
+              @for (tech of item.technologies; track $index) {
                 <span>{{ tech }}</span>
               }
             </div>
