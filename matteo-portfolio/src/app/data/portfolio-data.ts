@@ -7,6 +7,7 @@ export interface Profile {
   intro: string;
   location: string;
   availability: string;
+  heroNote: string;
   resumeUrl: string;
 }
 
@@ -127,7 +128,7 @@ export const portfolioContent: Record<Language, PortfolioData> = {
           description: 'Una mappa compatta delle tappe principali: studio, pratica, lavoro e crescita tecnica.',
           mapLabel: 'Mappa del percorso professionale',
           svgTitle: 'Percorso professionale',
-          svgDescription: 'Una strada curva collega le tappe del percorso di Matteo Mazzari.',
+          svgDescription: 'Una strada collega le tappe del percorso di Matteo Mazzari.',
         },
         education: {
           eyebrow: 'Capitolo II',
@@ -154,7 +155,7 @@ export const portfolioContent: Record<Language, PortfolioData> = {
         },
         contact: {
           eyebrow: 'Epilogo',
-          title: 'Costruiamo la prossima tappa',
+          title: 'Costruiamo la prossima tappa insieme',
         },
       },
       footer: {
@@ -169,7 +170,8 @@ export const portfolioContent: Record<Language, PortfolioData> = {
       intro:
         'Il mio percorso unisce studio universitario in informatica, diploma tecnico e lavoro sul campo: da applicazioni enterprise web e mobile a siti pubblici curati dall’analisi iniziale al rilascio online.',
       location: 'Genova, Italia',
-      availability: 'Sviluppatore software presso CIMA Research Foundation, orientato a frontend, web app e mobile app.',
+      availability: 'Per collaborazioni, progetti o semplicemente per scambiare due parole, puoi contattarmi qui.',
+      heroNote: 'Sviluppatore software presso CIMA Research Foundation',
       resumeUrl: '#contact',
     },
     about: {
@@ -386,7 +388,7 @@ export const portfolioContent: Record<Language, PortfolioData> = {
           description: 'A compact map of the main milestones: education, practice, work and technical growth.',
           mapLabel: 'Professional journey map',
           svgTitle: 'Professional journey',
-          svgDescription: 'A curved road connects Matteo Mazzari’s career milestones.',
+          svgDescription: 'A road connects Matteo Mazzari’s career milestones.',
         },
         education: {
           eyebrow: 'Chapter II',
@@ -413,7 +415,7 @@ export const portfolioContent: Record<Language, PortfolioData> = {
         },
         contact: {
           eyebrow: 'Epilogue',
-          title: 'Let’s build the next milestone',
+          title: 'Let’s build the next milestone together',
         },
       },
       footer: {
@@ -428,7 +430,8 @@ export const portfolioContent: Record<Language, PortfolioData> = {
       intro:
         'My path combines university studies in computer science, a technical diploma and hands-on work: from enterprise web and mobile applications to public websites managed from analysis to release.',
       location: 'Genoa, Italy',
-      availability: 'Software Developer at CIMA Research Foundation, focused on frontend, web apps and mobile apps.',
+      availability: 'For collaborations, projects or just to exchange a few words, you can reach me here.',
+      heroNote: 'Software Developer at CIMA Research Foundation',
       resumeUrl: '#contact',
     },
     about: {
